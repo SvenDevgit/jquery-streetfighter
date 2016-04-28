@@ -1,6 +1,8 @@
+/*
 * {
   outline: red 1px solid;
 }
+*/
 body {
   background-color: black;
 }
@@ -55,5 +57,5 @@ body {
   position: absolute;
   z-index: 10;
   top: 180px;
-  right:700px;
+  left: 450px;
 }
