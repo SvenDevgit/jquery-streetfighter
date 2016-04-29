@@ -1,6 +1,19 @@
 $( document ).ready(function() {
     console.log( "ready!" );  
 
+    $('.streetfighter-logo').fadeIn(3000)
+     .fadeOut(3000, function(){
+                        $('.brought-by').append('<p>Brought by...</p>')
+                        .css('font-size','30px')
+                        .fadeIn(3000)
+                        .fadeOut(3000, function(){
+                            $('.jquery-logo').fadeIn(3000)
+                            .fadeOut(3000, function(){
+                                $('.info-text').fadeIn(1000);
+                            }); 
+                        });
+      });  
+                 
     $('.ryu').mouseenter(function(){
         $('.ryu-still').hide(); 
         $('.ryu-ready').show(); 
@@ -30,8 +43,8 @@ $( document ).ready(function() {
           $('.ryu-ready').hide();
           $('.ryu-cool').show();}	
         	   
-    }).
-    keyup(function(event){
+    })
+    .keyup(function(event){
         if (event.which == 88)	
         { $('.ryu-cool').hide();
           $('.ryu-still').show();}	
@@ -42,5 +55,5 @@ function playHadouken () {
   $('#hadouken-sound')[0].volume = 0.5;
   $('#hadouken-sound')[0].load();
   $('#hadouken-sound')[0].play();
-}
+};
 
